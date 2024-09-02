@@ -49,7 +49,9 @@ const Weather = () => {
         temperature: Math.floor(data.main.temp),
         location: data.name,
       });
-    } catch (error) {}
+    } catch (error) {
+      setWeather(false);
+    }
   };
 
   useEffect(() => {
