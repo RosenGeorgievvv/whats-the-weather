@@ -14,7 +14,20 @@ const Weather = () => {
     const [weather, setWeather] = useState(false);
 
     const allIcons = {
-        "01d": clear_icon
+        "01d": clear_icon,
+        "01n": clear_icon,
+        "02d": cloud_icon,
+        "02n": cloud_icon,
+        "03d": cloud_icon,
+        "03n": cloud_icon,
+        "04d": drizzle_icon,
+        "04n": drizzle_icon,
+        "09d": rain_icon,
+        "09n": rain_icon,
+        "10d": rain_icon,
+        "10n": rain_icon,
+        "13d": snow_icon,
+        "13n": snow_icon,
     }
 
     const search = async (city) =>{
