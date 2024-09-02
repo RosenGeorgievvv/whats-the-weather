@@ -35,6 +35,8 @@ const Weather = () => {
             const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${import.meta.env.VITE_APP_ID}`
             const response = await fetch(url);
             const data = await response.json();
+            const icon = allIcons[data.weather[0].icon] || clear_icon;
+            console.log(data)
             setWeather({
                 humidity: data.main.humidity,
                 windSpeed: data.wind.speed,
@@ -57,20 +59,20 @@ const Weather = () => {
             <img src={search_icon} alt='' />
         </div>
         <img src={clear_icon} alt='' className='weather-icon' />
-        <p className='temperature'>16 C</p>
-        <p className='location'>Sofia</p>
+        <p className='temperature'>{weather.temperature} C</p>
+        <p className='location'>{weather.location}</p>
         <div className='weather-data'>
             <div className='col'>
                 <img src={humidity_icon} alt='' />
                 <div>
-                    <p>91 %</p>
+                    <p>{weather.humidity} %</p>
                     <span>Humidity</span>
                 </div>
             </div>
             <div className='col'>
                 <img src={wind_icon} alt='' />
                 <div>
-                    <p>3.6 Km/h</p>
+                    <p>{weather.windSpeed} Km/h</p>
                     <span>Wind Speed</span>
                 </div>
             </div>
