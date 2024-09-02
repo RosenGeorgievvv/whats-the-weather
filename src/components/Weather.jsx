@@ -7,14 +7,14 @@ import drizzle_icon from '../assets/drizzle.png';
 import rain_icon from '../assets/rain.png';
 import snow_icon from '../assets/snow.png';
 import wind_icon from '../assets/wind.png';
-import humidity_icon from '../assets/humidty.png';
+import humidity_icon from '../assets/humidity.png';
 
 const Weather = () => {
 
     const [weather, setWeather] = useState(false);
 
     const allIcons = {
-        "01d": clea
+        "01d": clear_icon
     }
 
     const search = async (city) =>{
@@ -27,7 +27,6 @@ const Weather = () => {
                 windSpeed: data.wind.speed,
                 temperature: Math.floor(data.main.temp),
                 location: data.name,
-                icon: 
             })
         } catch (error) {
             
