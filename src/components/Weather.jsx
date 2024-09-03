@@ -51,7 +51,7 @@ const Weather = () => {
     } catch (error) {
       setWeather(false);
     }
-  }; 
+  };
  
   useEffect(() => {
     search("Sofia");
