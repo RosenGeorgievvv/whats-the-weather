@@ -13,7 +13,7 @@ const Weather = () => {
   const inputRef = useRef();
   const [weather, setWeather] = useState(false);
 
-  const allIcons = {  
+  const allIcons = {   
     "01d": clear_icon,
     "01n": clear_icon,
     "02d": cloud_icon,
